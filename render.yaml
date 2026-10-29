@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: openwa
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 2785
+      - key: DATABASE_TYPE
+        value: sqlite
+      - key: DATABASE_NAME
+        value: ./data/openwa.sqlite
+      - key: ENGINE_TYPE
+        value: baileys
+      - key: SESSION_DATA_PATH
+        value: ./data/sessions
+      - key: STORAGE_TYPE
+        value: local
+      - key: STORAGE_LOCAL_PATH
+        value: ./data/media
+      - key: REDIS_ENABLED
+        value: false
+      - key: QUEUE_ENABLED
+        value: false
+      - key: CACHE_ENABLED
+        value: false
+      - key: API_MASTER_KEY
+        generateValue: true
+      - key: ALLOW_DEV_API_KEY
+        value: false
