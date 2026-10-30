@@ -29,6 +29,6 @@ services:
       - key: CACHE_ENABLED
         value: false
       - key: API_MASTER_KEY
-        generateValue: true
+        value: owa_k1_permanent-key-2024-vasudev
       - key: ALLOW_DEV_API_KEY
         value: false
