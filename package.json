@@ -65,7 +65,8 @@
     "migration:revert:main": "npm run typeorm -- migration:revert -d src/database/data-source-main.ts",
     "migration:revert:main:prod": "npm run typeorm:prod -- migration:revert -d dist/database/data-source-main.js",
     "migration:show:main": "npm run typeorm -- migration:show -d src/database/data-source-main.ts",
-    "migration:show:main:prod": "npm run typeorm:prod -- migration:show -d dist/database/data-source-main.js"
+    "migration:show:main:prod": "npm run typeorm:prod -- migration:show -d dist/database/data-source.js",
+    "webhook": "node webhook-server.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1156.0",
@@ -88,6 +89,7 @@
     "@whiskeysockets/baileys": "7.0.0-rc14",
     "adm-zip": "^0.6.1",
     "audio-decode": "^2.2.3",
+    "axios": "^1.21.0",
     "better-sqlite3": "^13.0.3",
     "bullmq": "^6.4.2",
     "class-transformer": "^0.5.1",
